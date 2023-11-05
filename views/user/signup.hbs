@@ -1,0 +1,45 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <form class="mt-5" action="/signup" method="post">
+                    <div class="form-outline mb-4">
+                        <center>
+                            <h2>CREATE AN ACCOUNT</h2>
+                        </center>
+                    </div>
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label">Name :</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Name">
+                    </div>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label">Email address :</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label">New Password :</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter New Password">
+                    </div>
+                    <!--<div class="form-outline mb-4">
+                        <input type="password" class="form-control" name="password">
+                        <label class="form-label">Confirm Password</label>
+                    </div>-->
+                    <!-- 2 column grid layout for inline styling -->
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign Up</button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Already have an account? <a href="/login">Login</a></p>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="name" class="form-control" name="isAdmin" value="true" hidden>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

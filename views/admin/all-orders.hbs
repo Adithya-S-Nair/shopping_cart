@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <div class="cart-heading">
+            <center>
+                <h2 class="text-warning">Admin Orders</h2>
+            </center>
+        </div>
+        <table class="table mt-2">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orders}}
+                <tr>
+                    <td>{{this.date}}</td>
+                    <td>{{this.delivery.adress}}</td>
+                    <td>{{this.delivery.mobile}}</td>
+                    <td>{{this.delivery.pincode}}</td>
+                    <td>{{this.total}}</td>
+                    <td>{{this.paymentMethod}}</td>
+                    <td>{{this.status}}</td>
+                    <td>
+                        <a href="/admin/ship-product/{{this._id}}" class="btn btn-primary text-light">SHIP</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

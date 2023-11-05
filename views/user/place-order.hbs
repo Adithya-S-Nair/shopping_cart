@@ -1,0 +1,56 @@
+<section>
+    <div class="container">
+        <form action="" id="checkout-form">
+            <div class="row" id="delivery-details-body">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Enter Delivery Details</h2>
+                    <div class="form-outline mb-4">
+                        <label for="" class="form-label">Adress</label>
+                        <input type="text" name="Adress" class="form-control">
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label for="" class="form-label">Pincode</label>
+                        <input type="number" name="Pincode" class="form-control">
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label for="" class="form-label">Mobile</label>
+                        <input type="number" name="Mobile" class="form-control">
+                        <input type="text" name="userId" value="{{user._id}}" hidden>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card payment-method" style="width: 18rem;">
+                        <div class="card-body">
+                            <h6 class="card-title">Total Amount : ₹ {{total}}/-</h6>
+                            <hr>
+                            <p class="card-text">Payment Method</p>
+                            <input type="radio" name="payment-method" value="COD" checked>
+                            <label for="" class="form-label">COD</label>
+                            <br>
+                            <input type="radio" name="payment-method" value="OnlinePayment">
+                            <label for="" class="form-label">Online Payment</label>
+                            <br>
+                            <button type="submit" class="btn btn-primary mt-2">CheckOut</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal-popup" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="/images/Logos/Success tick.png" style="width: 20px;height:auto" alt="">
+                            <h5 class="modal-title mr-auto pl-2">Order Success</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Your order has been successfully placed</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="/orders" class="btn btn-primary">View Orders</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+.cart-heading {
+    margin-top: 5em;
+}
+
+.place-order {
+    margin-right: -14rem;
+    margin-top: 4rem;
+    width: 20%;
+    border-radius: 0.2em;
+}
+#checkout-form{
+  margin-top: 8em;  
+}
+.payment-method{
+    margin-left: 5em;
+    margin-top: 5em;
+    border: 1px solid black;
+}
+.modal{
+    display: none;
+    margin-top: 30vh;
+}
+.order-products-heading{
+    margin-top: 5em;
+}
+/* #delivery-details-body{
+     filter: blur(0px);
+} */
+@keyframes fade {
+    0% {
+		filter: blur(0px);
+	}
+    100% {
+        filter: blur(15px);
+    }
+}

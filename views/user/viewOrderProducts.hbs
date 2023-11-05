@@ -1,0 +1,33 @@
+<section>
+    <div class="container">
+        <div class="order-products-heading">
+            <center>
+                <h2 class="text-warning">Products Ordered</h2>
+            </center>
+        </div>
+        <table class="table mt-2">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Prize</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <th><img src="/product-images/{{this.product._id}}.jpg" style="width: 100px; height:auto" alt=""
+                            srcset="">
+                    </th>
+                    <td>{{this.product.Name}}</td>
+                    <td>{{this.product.Prize}}</td>
+                    <td>{{this.product.Category}}</td>
+                    <td>{{this.quantity}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

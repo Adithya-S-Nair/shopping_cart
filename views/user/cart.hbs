@@ -1,0 +1,53 @@
+<section>
+    <div class="container">
+        {{#if proAvail}}
+        <div class="cart-heading">
+            <center>
+                <h2 class="text-warning">CART</h2>
+            </center>
+        </div>
+        <table class="table mt-2">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Prize</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <th><img src="/product-images/{{this.product._id}}.jpg" style="width: 100px; height:auto" alt=""
+                            srcset="">
+                    </th>
+                    <td>{{this.product.Name}}</td>
+                    <td>{{this.product.Prize}}</td>
+                    <td>{{this.product.Category}}</td>
+                    <td>
+                        <button class="btn btn-warning text-light"
+                            onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)">-</button><span
+                            class="p-2" id="{{this.product._id}}">{{this.quantity}}</span><button
+                            class="btn btn-warning text-light"
+                            onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger text-light"
+                            onclick="removeFromCart('{{this._id}}','{{this.product._id}}')">Remove</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <hr>
+        <h3 class="float-right mr-5 mt-4">Total : ₹ <span id="total-value">{{totalValue}}</span>/-</h3>
+        <a href="/place-order" class="btn btn-warning float-right place-order">Place Order</a>
+        {{else}}
+            <center>
+                <h2 class="text-warning" style="margin-top: 40vh;">Cart is empty</h2>
+            </center>
+        {{/if}}
+    </div>
+</section>
